@@ -20,7 +20,7 @@ class ClassBasedRoutingKeyResolver implements RoutingKeyResolver
 
     /**
      * @param object | string $message
-     * 
+     *
      * @return string
      */
     public function resolveRoutingKeyFor($message)
