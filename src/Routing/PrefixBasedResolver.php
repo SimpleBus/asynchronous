@@ -37,18 +37,18 @@ class PrefixBasedResolver implements RoutingKeyResolver
 
     public function resolveRoutingKeyFor($message)
     {
-        $message = '';
+        $routingKey = '';
 
         if (isset($this->prefix)) {
-            $message .= $this->prefix;
+            $routingKey .= $this->prefix;
         }
 
-        $message .= $this->parent->resolveRoutingKeyFor($message);
+        $routingKey .= $this->parent->resolveRoutingKeyFor($message);
 
         if (isset($this->suffix)) {
-            $message .= $this->prefix;
+            $routingKey .= $this->suffix;
         }
 
-        return $message;
+        return $routingKey;
     }
 }
