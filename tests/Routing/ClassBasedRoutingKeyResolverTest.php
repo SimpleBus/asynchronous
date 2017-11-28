@@ -19,4 +19,16 @@ class ClassBasedRoutingKeyResolverTest extends \PHPUnit\Framework\TestCase
 
         $this->assertSame('SimpleBus.Asynchronous.Tests.Routing.Fixtures.MessageDummy', $routingKey);
     }
+
+    /**
+     * @test
+     */
+    public function it_resolves_string_values()
+    {
+        $resolver = new ClassBasedRoutingKeyResolver();
+
+        $routingKey = $resolver->resolveRoutingKeyFor(MessageDummy::class);
+
+        $this->assertSame('SimpleBus.Asynchronous.Tests.Routing.Fixtures.MessageDummy', $routingKey);
+    }
 }
