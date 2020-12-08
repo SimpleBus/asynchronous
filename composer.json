@@ -1,0 +1,51 @@
+{
+    "name": "simple-bus/asynchronous",
+    "type": "library",
+    "description": "Generic classes and interfaces for asynchronous messaging using SimpleBus",
+    "keywords": [
+        "asynchronous",
+        "messaging",
+        "command bus",
+        "event bus"
+    ],
+    "homepage": "http://github.com/SimpleBus/Asynchronous",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cliff Odijk",
+            "email": "cliff@jcid.nl"
+        },
+        {
+            "name": "Ruud Kamphuis",
+            "homepage": "https://github.com/ruudk"
+        },
+        {
+            "name": "Matthias Noback",
+            "email": "matthiasnoback@gmail.com",
+            "homepage": "http://php-and-symfony.matthiasnoback.nl"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "beberlei/assert": "^3.0",
+        "psr/log": "^1.0",
+        "simple-bus/message-bus": "^3.0",
+        "simple-bus/serialization": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SimpleBus\\Asynchronous\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimpleBus\\Asynchronous\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
